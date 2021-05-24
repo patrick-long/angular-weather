@@ -2,8 +2,8 @@
   <h1>Hello!</h1>
   <h2>Welcome to the Angular Weather App</h2>
   <p>Search for a location to get weather information from the API</p>
-  <form class="search-form">
-    <input type="text" name="location" class="input" id="weatherLocation" placeholder="Type a location here">
+  <form class="search-form" [formGroup]="weatherSearchForm">
+    <input type="text" name="location" class="input" id="weatherLocation" placeholder="Type a location here" formControlName="location">
     <button type="submit" class="submit">Search for weather</button>
   </form>
 </div>

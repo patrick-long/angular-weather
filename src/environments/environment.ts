@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiKey: '9c992cd0c87f666755176a72842b6bd6'
+  apiKey: '9c992cd0c87f666755176a72842b6bd6',
+  apiURL: 'http://api.weatherstack.com/forecast?access_key=9c992cd0c87f666755176a72842b6bd6&units=f&query=houston',
 };
 
 /*

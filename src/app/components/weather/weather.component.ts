@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-weather',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
-  apiURL:string = 'http://api.weatherstack.com/forecast?access_key=9c992cd0c87f666755176a72842b6bd6&units=f&query=houston';
+  public weatherSearchForm!: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.weatherSearchForm = this.formBuilder.group({
+      location: [''],
+    });
   }
 
 }
