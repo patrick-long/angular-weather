@@ -1,0 +1,17 @@
+.input {
+    border-radius: 5px;
+    border-color: lightgrey;
+    border-width: 2px;
+    width: 10rem;
+    height: 1rem;
+}
+
+.submit {
+    color: white;
+    background: green;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 1px;
+    width: 65px;
+    height: 25px;
+}
