@@ -10,6 +10,7 @@ import { ApixuService } from '../../Services/apixu.service';
 export class WeatherComponent implements OnInit {
   public weatherSearchForm!: FormGroup;
   public weatherData: any;
+  public todaysDate!: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -29,5 +30,10 @@ export class WeatherComponent implements OnInit {
         console.log(this.weatherData);
       })
   };
+
+  // getCurrentDate() {
+  //   const todaysDate = this.weatherData?.location.localtime.slice(0, 10);
+  //   console.log(todaysDate);
+  // }
 
 }

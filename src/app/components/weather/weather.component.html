@@ -13,16 +13,16 @@
       <img src="{{ this.weatherData?.current.weather_icons[0] }}" alt="weather description icon">
       <p class="weather-info">{{ this.weatherData?.current.weather_descriptions[0] }} and {{ this.weatherData?.current.temperature }}&deg; out with a humidity level of {{ this.weatherData?.current.humidity }}</p>
       <p class="weather-info">Feels like {{ this.weatherData?.current.feelslike }}&deg;</p>
-      <p class="weather-info">Cloud cover is at {{ this.weatherData?.current.cloudcover }}% with a UV index of {{ this.weatherData?.current.uv_index }} out of 10</p>
-      <p class="weather-info"></p>
-      <p class="weather-info"></p>
-      <p class="weather-info"></p>
-      <p class="weather-info"></p>
-      <p class="weather-info"></p>
-      <p class="weather-info"></p>
+      <p class="weather-info">Cloud cover is at {{ this.weatherData?.current.cloudcover }}% with a UV index of {{ this.weatherData?.current.uv_index }}/10</p>
     </div>
-    <div class="forecasted-weather">
+    <!-- <div class="forecasted-weather">
       <h3 class="forecasted-weather-header">Forecast for the rest of today</h3>
-    </div>
+      <p class="weather-info">Today's date: {{ +(this.weatherData?.location.localtime.slice(0, 10)) }}</p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+    </div> -->
   </div>
 </div>
