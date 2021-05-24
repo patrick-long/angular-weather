@@ -9,10 +9,20 @@
 
   <div class="results-container" *ngIf="this.weatherData" >
     <div class="current-weather">
-      <h3>Current weather for {{ this.weatherData?.location.name }}, {{ this.weatherData?.location.region }}</h3>
+      <h3 class="current-weather-header">Currently in {{ this.weatherData?.location.name }}, {{ this.weatherData?.location.region }} at {{ this.weatherData?.location.localtime.slice(10, 16) }}</h3>
+      <img src="{{ this.weatherData?.current.weather_icons[0] }}" alt="weather description icon">
+      <p class="weather-info">{{ this.weatherData?.current.weather_descriptions[0] }} and {{ this.weatherData?.current.temperature }}&deg; out with a humidity level of {{ this.weatherData?.current.humidity }}</p>
+      <p class="weather-info">Feels like {{ this.weatherData?.current.feelslike }}&deg;</p>
+      <p class="weather-info">Cloud cover is at {{ this.weatherData?.current.cloudcover }}% with a UV index of {{ this.weatherData?.current.uv_index }} out of 10</p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
+      <p class="weather-info"></p>
     </div>
     <div class="forecasted-weather">
-      <h3>Forecast for the rest of today:</h3>
+      <h3 class="forecasted-weather-header">Forecast for the rest of today</h3>
     </div>
   </div>
 </div>
